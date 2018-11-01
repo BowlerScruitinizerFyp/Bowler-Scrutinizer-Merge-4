@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnalyseActivity"
+    android:background="@drawable/myimage"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/image_view"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Upload an image from Gallery in Gray scale with Red patches on Wrist , Elbow and Shoulder"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="23sp"
+            android:textStyle="normal|bold"
+            tools:layout_editor_absoluteX="0dp"
+
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/outline"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/myimage"
+
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="352dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+
+        >
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/image_view"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle"
+            android:onClick="OpenCamera"
+            android:text="CAPTURE IMAGE"
+            android:textColor="#fff"
+            android:textStyle="bold"
+
+            />
+
+        <!-- <Button
+             android:id="@+id/cord"
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:layout_below="@id/image_view"
+             android:layout_gravity="center"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_toLeftOf="@+id/gallery"
+             android:layout_toStartOf="@+id/gallery"
+             android:background="@drawable/circle"
+             android:onClick="cord"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:text="Points"
+             android:textColor="#fff"
+             android:textStyle="bold"
+             />
+
+             -->
+
+
+        <Button
+            android:id="@+id/cord"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/image_view"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/gallery"
+            android:layout_toStartOf="@+id/gallery"
+            android:background="@drawable/circle"
+            android:onClick="OpenGallery"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="UPLOAD IMAGE"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/image_view"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cord"
+            android:layout_toStartOf="@+id/cord"
+            android:background="@drawable/circle"
+            android:onClick="red1"
+            android:text="Analyse"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
