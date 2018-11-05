@@ -113,6 +113,7 @@ public class SliderActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(SliderActivity.this , MainActivity.class);
                         startActivity(intent);
+                        finish();
 
                     }
                 });

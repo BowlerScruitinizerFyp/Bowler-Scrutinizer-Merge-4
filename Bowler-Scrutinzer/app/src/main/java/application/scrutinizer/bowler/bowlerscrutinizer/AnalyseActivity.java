@@ -182,11 +182,7 @@ public class AnalyseActivity extends AppCompatActivity {
 
         }
 
-        else{
 
-            finish();
-
-        }
     }
 
 
@@ -347,7 +343,7 @@ public class AnalyseActivity extends AppCompatActivity {
 
         final View vew = getLayoutInflater().inflate(R.layout.activity_results,null);
         final TextView show = (TextView) vew.findViewById(R.id.GetTheta);
-        final TextView legal = (TextView) view.findViewById(R.id.Getresult);
+        final TextView legal = (TextView) vew.findViewById(R.id.Getresult);
         show.setText("\ntheta = " +theta);
 
         if(theta <= 15){

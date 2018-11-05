@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="application.scrutinizer.bowler.bowlerscrutinizer">
+    package="application.scrutinizer.bowler.bowlerscrutinizer"
+    android:installLocation="auto"
+    >
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -15,24 +17,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SliderActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".SliderActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".RegisterActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResultsActivity" />
-        <activity android:name=".AnalyseActivity" />
-        <activity android:name=".AllResultsActivity"></activity>
+        <activity android:name=".ResultsActivity"  />
+        <activity android:name=".AnalyseActivity"  android:label="Analyze Now" />
+        <activity android:name=".AllResultsActivity" android:label="Your Results"></activity>
     </application>
 
 </manifest>
